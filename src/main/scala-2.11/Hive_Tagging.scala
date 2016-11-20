@@ -40,7 +40,7 @@ object Hive_Tagging {
 
       val temp = split.map( s => List(s.slice(0,1)) ++ List( (metrics.map( a => if ((s.slice(1,s.size)).contains(a)) "Y" else "N") ) ) )
 
-      val result = temp.map( s => s.flatten )
+      val result = temp.map( t => t.flatten )
 
       case class RLT (instance_id: String, ldos : String, warranty_type : String)
 
@@ -52,6 +52,8 @@ object Hive_Tagging {
       sc.stop()
 
       //Making change to the file -> branch -> Test_1
+
+      //New changes made - Test_2
 
   }
 }
