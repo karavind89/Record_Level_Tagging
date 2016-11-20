@@ -30,7 +30,7 @@ object Hive_Tagging {
       val pairs2 = id_warranty_type.map(s => (s, "warranty_type"))
 
 
-      val pair_result = sc.union(pairs1,pairs2)
+      val pair_result = sc.union(pairs1)
 
       val reducedByKey = pair_result.reduceByKey((x,y) => x + ","+ y)
 
