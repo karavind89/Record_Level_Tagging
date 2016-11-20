@@ -29,6 +29,7 @@ object Hive_Tagging {
       val pairs1 = id_ldos.map(s => (s, "ldos"))
       val pairs2 = id_warranty_type.map(s => (s, "warranty_type"))
 
+      val new_value = "added here"
 
       val pair_result = sc.union(pairs1,pairs2)
 
